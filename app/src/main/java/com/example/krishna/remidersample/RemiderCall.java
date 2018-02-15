@@ -105,7 +105,17 @@ public class RemiderCall extends AppCompatActivity {
         Intent intent = new Intent(getBaseContext(), Alarm.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getBaseContext(), RQS_1, intent, 0);
         AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, targetCal.getTimeInMillis(), pendingIntent);
+        //////////////***********************use one alarm************///////////////
+
+//        alarmManager.set(AlarmManager.RTC_WAKEUP, targetCal.getTimeInMillis(), pendingIntent);
+
+        /////////////////////////**********use repeating alarm**********//////////////
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
+        calendar.add(Calendar.SECOND, 10);
+
+
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 5*1000, pendingIntent);
         Intent intent1=new Intent(RemiderCall.this,MainActivity.class);
         startActivity(intent1);
     }

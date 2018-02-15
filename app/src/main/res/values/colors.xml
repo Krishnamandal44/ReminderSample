@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorText">#616161</color>
+    <color name="colorTextLight">#fafafa</color>
+    <color name="colorTextHint">#e0e0e0</color>
+    <color name="colorGray">#eeeeee</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorOrange">#e18330</color>
+    <color name="colorChatCard">#0277bd</color>
+    <color name="colorEditTextBackground">#00ffffff</color>
+
+    <color name="colorTextHeadingBackground">#327cb342</color>
+    <color name="colorTextSubHeadingBackground">#eeeeee</color>
+    <color name="colorButtonInActive">#E0E0E0</color>
+    <color name="colorButtonActive">#7cb342</color>
+    <color name="colorLoginText">#c7c4c4</color>
+    <color name="colorWhite">#FFFFFF</color>
+</resources>

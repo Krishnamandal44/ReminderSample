@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.krishna.remidersample.RemiderCall">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/circular_card_view_layout_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/circular_card_view_layout_marginBottom"
+        android:layout_marginLeft="@dimen/circular_card_view_layout_marginLeft"
+        android:layout_marginRight="@dimen/circular_card_view_layout_marginRight"
+        android:layout_marginTop="@dimen/circular_card_view_layout_marginTop"
+        card_view:cardCornerRadius="@dimen/circular_card_view_cardCornerRadius"
+        card_view:cardElevation="@dimen/circular_card_view_cardElevation">
+
+
+        <LinearLayout
+            android:id="@+id/ln_reminder_calender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="1dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/set_reminder_date"
+                style="@style/HintText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@color/colorWhite"
+                android:hint="Service Date"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/colorText" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorTextHint"
+                android:paddingRight="2dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/reminder_calender"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_date"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/circular_card_view_layout_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/circular_card_view_layout_marginBottom"
+        android:layout_marginLeft="@dimen/circular_card_view_layout_marginLeft"
+        android:layout_marginRight="@dimen/circular_card_view_layout_marginRight"
+        android:layout_marginTop="@dimen/circular_card_view_layout_marginTop"
+        card_view:cardCornerRadius="@dimen/circular_card_view_cardCornerRadius"
+        card_view:cardElevation="@dimen/circular_card_view_cardElevation">
+
+
+        <LinearLayout
+            android:id="@+id/ln_reminder_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="1dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/set_reminder_time"
+                style="@style/HintText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@color/colorWhite"
+                android:hint="Service Time"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/colorText" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorTextHint"
+                android:paddingRight="2dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/reminder_watch"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_access_time_black"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <Button
+        android:id="@+id/btn_set_reminder"
+        style="@style/LoginHintText"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/buttton_layout_marginBottom"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/buttton_layout_marginRight"
+        android:layout_marginTop="@dimen/buttton_layout_marginTop"
+        android:background="@drawable/login_button_border"
+        android:paddingBottom="@dimen/buttton_paddingBottom"
+        android:paddingLeft="@dimen/buttton_paddingLeft"
+        android:paddingRight="@dimen/buttton_paddingRight"
+        android:paddingTop="@dimen/buttton_paddingTop"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+</LinearLayout>

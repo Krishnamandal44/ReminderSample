@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tabsHeight">48dp</dimen>
+
+    <dimen name="top_recycler_margin_bottom">10dp</dimen>
+    <dimen name="dashboard_all_sevices_margin_bottom">5dp</dimen>
+    <dimen name="dashboard_all_sevices_margin_top">5dp</dimen>
+
+
+    //for CardView EditText background style
+    <dimen name="circular_card_view_layout_height">40dp</dimen>
+    <dimen name="circular_card_view_layout_marginBottom">9dp</dimen>
+    <dimen name="circular_card_view_layout_marginTop">1dp</dimen>
+    <dimen name="circular_card_view_layout_marginLeft">10dp</dimen>
+    <dimen name="circular_card_view_layout_marginRight">10dp</dimen>
+    <dimen name="circular_card_view_cardCornerRadius">15dp</dimen>
+    <dimen name="circular_card_view_cardElevation">1dp</dimen>
+
+
+    //for  EditText style which is present in Card View
+    <dimen name="card_edit_text_paddingTop">10dp</dimen>
+    <dimen name="card_edit_text_paddingLeft">10dp</dimen>
+    <dimen name="card_edit_text_paddingRight">10dp</dimen>
+    <dimen name="card_edit_text_paddingBottom">10dp</dimen>
+
+
+
+
+    //for Button background style
+    <dimen name="buttton_layout_height">40dp</dimen>
+    <dimen name="buttton_layout_marginBottom">10dp</dimen>
+    <dimen name="buttton_layout_marginTop">10dp</dimen>
+    <dimen name="buttton_layout_marginLeft">10dp</dimen>
+    <dimen name="buttton_layout_marginRight">10dp</dimen>
+    <dimen name="buttton_paddingTop">10dp</dimen>
+    <dimen name="buttton_paddingLeft">10dp</dimen>
+    <dimen name="buttton_paddingRight">10dp</dimen>
+    <dimen name="buttton_paddingBottom">10dp</dimen>
+
+    //for Page Title style
+    <dimen name="page_tiltle_paddingTop">10dp</dimen>
+    <dimen name="page_tiltle_paddingLeft">10dp</dimen>
+    <dimen name="page_tiltle_paddingRight">10dp</dimen>
+    <dimen name="page_tiltle_paddingBottom">10dp</dimen>
+
+
+    //for Title Text style
+    <dimen name="title_text_style_paddingTop">10dp</dimen>
+    <dimen name="title_text_style_paddingLeft">10dp</dimen>
+    <dimen name="title_text_style_paddingRight">10dp</dimen>
+    <dimen name="title_text_style_paddingBottom">10dp</dimen>
+
+</resources>

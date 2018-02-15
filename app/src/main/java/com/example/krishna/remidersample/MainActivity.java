@@ -51,4 +51,8 @@ public class MainActivity extends AppCompatActivity {
     public void setReminder(View view) {
         startActivity(new Intent(MainActivity.this,ReminderActivity.class));
     }
+
+    public void repeatReminder(View view) {
+        startActivity(new Intent(MainActivity.this,RepetingReminderActivity.class));
+    }
 }

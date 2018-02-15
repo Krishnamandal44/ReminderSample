@@ -24,7 +24,8 @@
         <activity android:name=".CreateNotificationActivity" />
         <activity android:name=".NotificationReceiverActivity" />
         <activity android:name=".RemiderCall" />
-        <activity android:name=".ReminderActivity"></activity>
+        <activity android:name=".ReminderActivity" />
+        <activity android:name=".RepetingReminderActivity"></activity>
     </application>
 
 </manifest>

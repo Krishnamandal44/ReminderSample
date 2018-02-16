@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class RemiderCall extends AppCompatActivity {
@@ -97,28 +99,59 @@ public class RemiderCall extends AppCompatActivity {
     private void setAlarm(Calendar targetCal){
 
 
-        Toast.makeText(RemiderCall.this, "Alarm is set@ " + targetCal.getTime(), Toast.LENGTH_SHORT).show();
-//        info.setText("\n\n***\n"
-//                + "Alarm is set@ " + targetCal.getTime() + "\n"
-//                + "***\n");
+        Toast.makeText(RemiderCall.this, "Alarm is set " + targetCal.getTime(), Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(getBaseContext(), Alarm.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(getBaseContext(), RQS_1, intent, 0);
+//        Intent intent = new Intent(getBaseContext(), Alarm.class);
+//        PendingIntent pendingIntent = PendingIntent.getBroadcast(getBaseContext(), RQS_1, intent, 0);
+//        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+//        //////////////***********************use one alarm************///////////////
+//
+////        alarmManager.set(AlarmManager.RTC_WAKEUP, targetCal.getTimeInMillis(), pendingIntent);
+//
+//        /////////////////////////**********use repeating alarm**********//////////////
+//        Calendar calendar = Calendar.getInstance();
+//        calendar.setTimeInMillis(System.currentTimeMillis());
+//        calendar.add(Calendar.SECOND, 10);
+//
+//
+//        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 5*1000, pendingIntent);
+
+
+
+//        AlarmManager mgrAlarm = (AlarmManager)getSystemService(ALARM_SERVICE);
+//        ArrayList<PendingIntent> intentArray = new ArrayList<PendingIntent>();
+//
+//        for(int i = 0; i < 10; ++i)
+//        {
+//            Intent intent2 = new Intent(getBaseContext(), Alarm.class);
+//            // Loop counter `i` is used as a `requestCode`
+//            PendingIntent pi = PendingIntent.getBroadcast(getBaseContext(), i, intent2, 0);
+//            // Single alarms in 1, 2, ..., 10 minutes (in `i` minutes)
+//            mgrAlarm.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+//                    SystemClock.elapsedRealtime() + 60000 * i,
+//                    pi);
+//
+//            intentArray.add(pi);
+//        }
+
+        Intent intent = new Intent(RemiderCall.this, Alarm.class);
         AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-        //////////////***********************use one alarm************///////////////
-
-//        alarmManager.set(AlarmManager.RTC_WAKEUP, targetCal.getTimeInMillis(), pendingIntent);
-
-        /////////////////////////**********use repeating alarm**********//////////////
+        final int _id = (int) System.currentTimeMillis();
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
         calendar.add(Calendar.SECOND, 10);
+        PendingIntent appIntent = PendingIntent.getBroadcast(this, _id, intent,PendingIntent.FLAG_ONE_SHOT);
 
-
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 5*1000, pendingIntent);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), appIntent);
         Intent intent1=new Intent(RemiderCall.this,MainActivity.class);
         startActivity(intent1);
+
+
+
+
+
     }
+
 
     //////////////////////////*******showDatePicker**********//////////////////////////
     private void showDatePicker() {
